@@ -23,7 +23,7 @@ This project was built using [Node v16.x] and uses the following technologies:
 2. Clone the repository.
 
 ```bash
-$ git clone https://github.com/anonsas/27-amazon.git
+$ git clone https://github.com/anonsas/amazon-mern.git
 ```
 
 3. Navigate to the project's root directory.
