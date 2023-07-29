@@ -1,0 +1,17 @@
+@import '../../app/styles/base/index.scss';
+
+.footer-bg {
+  position: sticky;
+  bottom: 0;
+  color: $color-white;
+  background-color: $bg-footer;
+}
+
+.footer {
+  @include restrict-max-width($max-page-width);
+
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

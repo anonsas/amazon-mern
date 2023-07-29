@@ -1,0 +1,14 @@
+@import '../../../../app/styles/abstracts/index.scss';
+
+.privacy {
+  display: flex;
+  column-gap: 2rem;
+
+  &__link {
+    color: $color-white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

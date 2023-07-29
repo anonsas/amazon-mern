@@ -1,0 +1,159 @@
+@import '../../app/styles/abstracts/index.scss';
+
+.header-top {
+  color: $color-white;
+  background-color: $bg-header-top;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+
+  &__logo-container {
+    margin-top: 1rem;
+  }
+
+  &__logo {
+    height: 4rem;
+    width: 15rem;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  &__search-container {
+    height: 3.5rem;
+    border-radius: 0.3rem;
+    background-color: #febd69;
+
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &:hover {
+      background-color: #f3a846;
+    }
+  }
+
+  &__search-input {
+    height: 100%;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    flex-grow: 1;
+  }
+
+  &__search-icon {
+    height: 4rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  &__account-container {
+    font-size: 1.2rem;
+    margin: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  &__profile-container {
+    display: flex;
+    flex-direction: column;
+
+    &:link,
+    &:visited {
+      padding: 0.5rem;
+      line-height: 1.2;
+      cursor: pointer;
+      color: $color-white;
+      border: 1px solid transparent;
+      border-radius: 0.3rem;
+    }
+
+    &:hover {
+      border: 1px solid $color-white;
+    }
+  }
+
+  &__cart-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    column-gap: 0.4rem;
+    padding: 0.5rem;
+
+    &:link,
+    &:visited {
+      line-height: 1.2;
+      cursor: pointer;
+      color: $color-white;
+      border: 1px solid transparent;
+      border-radius: 0.3rem;
+    }
+
+    &:hover {
+      border: 1px solid $color-white;
+    }
+  }
+
+  &__cart-count {
+    position: absolute;
+    top: -0.3rem;
+    left: 2.3rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: #f08805;
+    border-radius: 50%;
+    padding: 0.4rem;
+    line-height: 1;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+  }
+
+  &__cart-icon {
+    height: 3rem;
+  }
+
+  &__cart-name {
+    font-weight: 700;
+  }
+}
+
+.header-bottom {
+  height: 4rem;
+  color: $color-white;
+  background-color: $bg-header-bottom;
+  display: flex;
+  align-items: center;
+
+  &__sidebar-button {
+    padding: 0.5rem 1rem;
+    color: $color-white;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $color-white;
+    }
+  }
+
+  &__menu-icon {
+    height: 2rem;
+    margin-right: 0.25rem;
+    color: $color-white;
+  }
+
+  &__nav-text {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid $color-white;
+    }
+  }
+}
