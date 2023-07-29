@@ -9,7 +9,7 @@ Technology company which focuses on e-commerce, cloud computing, digital streami
 
 ## Technology stack
 
-This project was built using [Node v16.x] and uses the following technologies:
+This project was built using [Node v18.x] and uses the following technologies:
 
 - NPM - for dependency management.
 - SASS - to keep styles organized.
