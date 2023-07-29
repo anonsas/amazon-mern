@@ -11,33 +11,19 @@ Technology company which focuses on e-commerce, cloud computing, digital streami
 
 This project was built using [Node v18.x] and uses the following technologies:
 
+Frontend:
 - NPM - for dependency management.
-- SASS - to keep styles organized.
+- Sass - to keep styles organized.
 - React - for bundling, transpilation, development, etc.
 - zustand - for client state management.
 - react-query - for server state management.
 
-## Installation
-
-1. Install Node from https://nodejs.org/en/.
-2. Clone the repository.
-
-```bash
-$ git clone https://github.com/anonsas/amazon-mern.git
-```
-
-3. Navigate to the project's root directory.
-4. Install all the dependencies listed in package.json.
-
-```bash
-npm install
-```
-
-5. Start the project.
-
-```bash
-npm start
-```
+Backend:
+- Node
+- Express
+- MongoDB
+- Mongoose
+- Nodemailer
 
 ## Rankings
 
