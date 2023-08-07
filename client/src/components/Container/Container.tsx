@@ -1,5 +1,5 @@
 import { ReactNode, CSSProperties } from 'react';
-import { Breakpoints } from 'components/breakpoints';
+import { Breakpoints } from 'app/utils/breakpoints';
 import { StyledContainer } from './Container.styled';
 
 export type Props = {

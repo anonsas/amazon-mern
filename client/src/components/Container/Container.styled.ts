@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Props } from './Container';
-import { breakpoints } from 'components/breakpoints';
+import { breakpoints } from 'app/utils/breakpoints';
 
 export const StyledContainer = styled.div<Props>`
   display: 'block';
