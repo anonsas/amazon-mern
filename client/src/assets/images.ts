@@ -1,9 +1,9 @@
 import logoLight from './logo/logo-light.png';
 import logoDark from './logo/logo-dark.png';
-import banner1 from './banner/banner-1.jpeg';
-import banner2 from './banner/banner-2.jpeg';
-import banner3 from './banner/banner-3.jpeg';
-import banner4 from './banner/banner-4.jpeg';
+import banner1 from './banner/banner-1.jpg';
+import banner2 from './banner/banner-2.jpg';
+import banner3 from './banner/banner-3.jpg';
+import banner4 from './banner/banner-4.jpg';
 // import adHomepage from './banner/ads-homepage.jpg';
 // import adCheckout from './banner/ads-checkout.png';
 import cartIcon from './icon/cart.svg';
