@@ -1,6 +1,6 @@
 import './Home.page.scss';
 import { useShoppingListData } from './hooks/useShoppingListData';
-import { Loader } from 'components/Loader/Loader';
+import { Loader, Container } from 'components';
 import { ProductCard } from './components/ProductCard/ProductCard';
 
 export function HomePage() {
@@ -15,7 +15,7 @@ export function HomePage() {
   }
 
   return (
-    <section className="products-container">
+    <Container maxWidth="xxl">
       {data.data?.slice(0, 4).map(({ id, title, price, description, category, image, rating }) => (
         <ProductCard
           key={id}
@@ -47,6 +47,7 @@ export function HomePage() {
             />
           ))}
       </div>
+
       {data.data
         ?.slice(5)
         .map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
@@ -61,6 +62,6 @@ export function HomePage() {
             rating={rate}
           />
         ))}
-    </section>
+    </Container>
   );
 }

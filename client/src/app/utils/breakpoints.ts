@@ -6,7 +6,7 @@ export const breakpoints = {
   md: 768,
   lg: 1024,
   xl: 1280,
-  xxl: 1536,
+  xxl: 1500,
 };
 
 export const deviceWidth = {

@@ -1,6 +1,6 @@
-export * from './Home/Home.page';
-export * from './Register/Register.page';
-export * from './Login/Login.page';
-export * from './Account/Account.page';
-export * from './Order/Order.page';
-export * from './Cart/Cart.page';
+export { HomePage } from './Home/Home.page';
+export { RegisterPage } from './Register/Register.page';
+export { LoginPage } from './Login/Login.page';
+export { AccountPage } from './Account/Account.page';
+export { OrderPage } from './Order/Order.page';
+export { CartPage } from './Cart/Cart.page';
