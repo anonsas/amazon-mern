@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
 import { StatementTypes, ActionTypes } from '../types/useRegister.types';
-import { ValidateName, ValidateEmail, ValidatePassword } from 'app/utils/formValidation';
+import { validateName, validateEmail, validatePassword } from 'app/utils';
 
 const initialState = {
   name: {
@@ -64,15 +64,15 @@ export function useRegisterForm() {
   const statement = (inputValue: string, key: keyof StatementTypes) => {
     const statementList = {
       // name
-      nameIsValid: ValidateName(inputValue),
+      nameIsValid: validateName(inputValue),
       // email
-      emailIsValid: ValidateEmail(inputValue),
-      emailIsNotValid: !ValidateEmail(inputValue),
+      emailIsValid: validateEmail(inputValue),
+      emailIsNotValid: !validateEmail(inputValue),
       emailShowsErrorMessage: state.email.showErrorMsg,
       // password
       passwordIsNotEmpty: state.password.value.length,
-      passwordIsValid: ValidatePassword(inputValue),
-      passwordIsNotValid: !ValidatePassword(inputValue),
+      passwordIsValid: validatePassword(inputValue),
+      passwordIsNotValid: !validatePassword(inputValue),
       passwordEqualsConfirmPassword: inputValue === state.confirmPassword.value,
       passwordNotEqualsConfirmPassword: inputValue !== state.confirmPassword.value,
       passwordLengthLowerConfirmPassword: inputValue.length <= state.confirmPassword.value.length,
@@ -80,7 +80,7 @@ export function useRegisterForm() {
       // confirm password
       confirmPasswordIsEmpty: !state.confirmPassword.value,
       confirmPasswordIsNotEmpty: state.confirmPassword.value.length,
-      confirmPasswordIsValid: ValidatePassword(inputValue),
+      confirmPasswordIsValid: validatePassword(inputValue),
       confirmPasswordNotEqualsPassword: inputValue !== state.password.value,
       confirmPasswordLengthHigherPassword: inputValue.length >= state.password.value.length,
       confirmPasswordEqualsPassword: inputValue === state.password.value,

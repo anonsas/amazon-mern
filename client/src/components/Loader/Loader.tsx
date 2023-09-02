@@ -1,8 +1,8 @@
-import './Loader.scss';
+import * as Styled from './Loader.styled';
 
 export function Loader() {
   return (
-    <div className="loader">
+    <Styled.Loader>
       <div></div>
       <div></div>
       <div></div>
@@ -15,6 +15,6 @@ export function Loader() {
       <div></div>
       <div></div>
       <div></div>
-    </div>
+    </Styled.Loader>
   );
 }

@@ -1,6 +1,6 @@
 import { ReactNode, CSSProperties } from 'react';
 import { Breakpoints } from 'app/utils/breakpoints';
-import { StyledContainer } from './Container.styled';
+import * as Styled from './Container.styled';
 
 export type Props = {
   maxWidth?: Breakpoints | 'full';
@@ -26,5 +26,5 @@ export type Props = {
 };
 
 export function Container(props: Props) {
-  return <StyledContainer {...props} />;
+  return <Styled.Container {...props} />;
 }

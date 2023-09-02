@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { Props } from './Container';
 import { breakpoints } from 'app/utils/breakpoints';
 
-export const StyledContainer = styled.div<Props>`
+export const Container = styled.div<Props>`
   display: 'block';
   width: 100%;
   max-width: ${(props) =>
