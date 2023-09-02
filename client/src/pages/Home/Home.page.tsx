@@ -1,7 +1,7 @@
 import * as Styled from './Homepage.styled';
 import { useShoppingListData } from './hooks/useShoppingListData';
 import { Loader, Container, Card } from 'components';
-import { ProductCard } from './components/ProductCard/ProductCard';
+import { ProductCard } from './components';
 
 export default function HomePage() {
   const { isLoading, isError, data } = useShoppingListData();

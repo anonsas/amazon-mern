@@ -1,14 +1,14 @@
-import './RegisterFooter.scss';
 import { Link } from 'react-router-dom';
+import * as Styled from './Footer.styled';
 
-export function RegisterFooter() {
+export function Footer() {
   return (
     <>
-      <p className="register-footer__paragraph">
+      <Styled.Paragraph>
         By creating an account, you agree to Amazon's
         <a href="www.amazon.com"> Conditions of Use</a> and
         <a href="www.amazon.com"> Privacy Notice</a>.
-      </p>
+      </Styled.Paragraph>
 
       <div>
         <div>

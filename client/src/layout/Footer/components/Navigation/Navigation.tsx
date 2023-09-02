@@ -1,4 +1,4 @@
-import './Navigation.scss';
+import * as Styled from './Navigation.styled';
 import images from 'assets/images';
 
 export function Navigation() {
@@ -26,12 +26,12 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="socials" aria-label="social links">
+    <Styled.Component aria-label="social links">
       {socials.map((social) => (
         <a
           key={`footer-social-${social.name}`}
           href={social.link}
-          className="socials__link"
+          className="link"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={social.name}
@@ -39,6 +39,6 @@ export function Navigation() {
           <img src={social.img} alt={social.name} />
         </a>
       ))}
-    </nav>
+    </Styled.Component>
   );
 }

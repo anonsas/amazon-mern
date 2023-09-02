@@ -1,4 +1,6 @@
-.product {
+import styled from 'styled-components';
+
+export const Component = styled.div`
   z-index: 30;
   position: relative;
   height: auto;
@@ -13,7 +15,7 @@
   flex-direction: column;
   row-gap: 1rem;
 
-  &__category {
+  .category {
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
@@ -21,14 +23,14 @@
     font-style: italic;
   }
 
-  &__image {
+  .image {
     height: 20rem;
     width: 20rem;
     object-fit: contain;
     align-self: center;
   }
 
-  &__price {
+  .price-container {
     margin-bottom: 1rem;
   }
-}
+`;

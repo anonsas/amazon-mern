@@ -1,15 +1,15 @@
-import './Privacy.scss';
+import * as Styled from './Privacy.styled';
 
 export function Privacy() {
   const links = ['terms', 'sitemap', 'privacy'];
 
   return (
-    <ul className="privacy">
+    <Styled.Component>
       {links.map((link) => (
         <li key={link}>
           <a
             href={`https://www.amazon.com/${link}`}
-            className="privacy__link"
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link}
@@ -18,6 +18,6 @@ export function Privacy() {
           </a>
         </li>
       ))}
-    </ul>
+    </Styled.Component>
   );
 }

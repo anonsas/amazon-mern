@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
-import './StarIcons.scss';
 
 type Props = {
   rating: number;

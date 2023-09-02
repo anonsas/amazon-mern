@@ -1,9 +1,15 @@
-.register-form {
+import styled from 'styled-components';
+
+export const Component = styled.form`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 
-  &__input-container {
+  .label {
+    font-weight: 500;
+  }
+
+  .input-container {
     border: 1px solid darkgray;
     padding: 0 1rem;
     display: flex;
@@ -11,21 +17,17 @@
     align-items: center;
   }
 
-  &__label {
-    font-weight: 500;
-  }
-
-  &__input {
+  .input {
     height: 3rem;
     width: 100%;
   }
 
-  &__input-icon {
+  .input-icon {
     height: 1.6rem;
     width: 1.6rem;
   }
 
-  &__signin-btn {
+  .signin-btn {
     cursor: pointer;
     height: 3rem;
     width: 100%;
@@ -34,4 +36,4 @@
     border-radius: 2px;
     border-color: #a88734 #9c7e31 #846a29;
   }
-}
+`;

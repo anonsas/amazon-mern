@@ -1,5 +1,5 @@
 import { FormEvent, SyntheticEvent } from 'react';
-import './RegisterForm.scss';
+import * as Styled from './Form.styled';
 import images from 'assets/images';
 
 type data = {
@@ -26,7 +26,7 @@ type Props = {
   registerConfirmPasswordValidation: (e: SyntheticEvent) => void;
 };
 
-export function RegisterForm({
+export function Form({
   submitRegisterForm,
   nameData,
   emailData,
@@ -40,39 +40,34 @@ export function RegisterForm({
   const createFormInput = (data: data, handler: (e: SyntheticEvent) => void) => {
     return (
       <div>
-        <label htmlFor={data.title} className="register-form__label">
+        <label htmlFor={data.title} className="label">
           {data.label}
         </label>
-        <div className="register-form__input-container">
+        <div className="input-container">
           <input
             type={data.type}
             name={data.title}
             placeholder={data.placeholder}
-            className="register-form__input"
+            className="input"
             value={data.value}
             onChange={handler}
           />
-          {data.isValid && (
-            <img
-              src={images.checkCircleGreen}
-              className="register-form__input-icon"
-              alt="valid input"
-            />
-          )}
+          {data.isValid && <img src={images.checkCircleGreen} className="input-icon" alt="valid input" />}
         </div>
       </div>
     );
   };
+
   return (
-    <form className="register-form" onSubmit={submitRegisterForm}>
+    <Styled.Component onSubmit={submitRegisterForm}>
       {createFormInput(nameData, registerNameValidation)}
       {createFormInput(emailData, registerEmailValidation)}
       {createFormInput(passwordData, registerPasswordValidation)}
       {createFormInput(confirmPasswordData, registerConfirmPasswordValidation)}
 
-      <button type="submit" className="register-form__signin-btn">
+      <button type="submit" className="signin-btn">
         Register
       </button>
-    </form>
+    </Styled.Component>
   );
 }

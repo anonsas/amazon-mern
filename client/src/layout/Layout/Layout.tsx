@@ -1,6 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import * as Styled from './Layout.styled';
-
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
 
@@ -15,14 +14,14 @@ export function Layout() {
   }
 
   return (
-    <Styled.Layout>
+    <Styled.Component>
       <Header />
-      <Styled.MainContentContainer>
-        <Styled.MainContent>
+      <div className="content-container">
+        <div className="content">
           <Outlet />
-        </Styled.MainContent>
-      </Styled.MainContentContainer>
+        </div>
+      </div>
       <Footer />
-    </Styled.Layout>
+    </Styled.Component>
   );
 }

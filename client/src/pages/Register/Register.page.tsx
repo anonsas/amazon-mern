@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import images from 'assets/images';
-import './Register.page.scss';
-import { RegisterForm } from './components/RegisterForm/RegisterForm';
-import { RegisterFooter } from './components/RegisterFooter/RegisterFooter';
+import { Component } from './RegisterPage.styled';
+import { Form, Footer } from './components';
 import { useRegisterForm } from './hooks/useRegisterForm';
 import { useRegisterNewUser } from './hooks/useRegisterNewUser';
 
@@ -23,12 +22,7 @@ export default function RegisterPage() {
   function submitRegisterForm(e: React.FormEvent) {
     e.preventDefault();
 
-    if (
-      nameData.isValid &&
-      emailData.isValid &&
-      passwordData.isValid &&
-      confirmPasswordData.isValid
-    ) {
+    if (nameData.isValid && emailData.isValid && passwordData.isValid && confirmPasswordData.isValid) {
       const newUser = {
         name: nameData.value,
         email: emailData.value,
@@ -42,14 +36,14 @@ export default function RegisterPage() {
     return;
   }
   return (
-    <main className="register">
+    <Component>
       <Link to="/">
         <img src={images.logoDark} alt="logo" className="register__logo" />
       </Link>
 
       <div className="register__form-container">
         <h1 className="register__heading">Create Account</h1>
-        <RegisterForm
+        <Form
           submitRegisterForm={submitRegisterForm}
           nameData={nameData}
           emailData={emailData}
@@ -61,8 +55,8 @@ export default function RegisterPage() {
           registerConfirmPasswordValidation={registerConfirmPasswordValidation}
         />
 
-        <RegisterFooter />
+        <Footer />
       </div>
-    </main>
+    </Component>
   );
 }

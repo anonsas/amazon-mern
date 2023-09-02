@@ -1,38 +1,39 @@
-@import '../../app/styles/abstracts/index.scss';
+import styled from 'styled-components';
+import { color } from 'app/utils';
 
-.header-top {
-  color: $color-white;
-  background-color: $bg-header-top;
+export const HeaderTop = styled.div`
+  color: ${color.white};
+  background-color: ${color.black200};
   height: 6rem;
   display: flex;
   align-items: center;
 
-  &__logo-container {
+  .logo-container {
     margin-top: 1rem;
   }
 
-  &__logo {
+  .logo {
     height: 4rem;
     width: 15rem;
     object-fit: contain;
     cursor: pointer;
   }
 
-  &__search-container {
+  .search-container {
     height: 3.5rem;
     border-radius: 0.3rem;
-    background-color: #febd69;
+    background-color: ${color.yellow100};
 
     display: flex;
     align-items: center;
     flex-grow: 1;
 
     &:hover {
-      background-color: #f3a846;
+      background-color: ${color.yellow200};
     }
   }
 
-  &__search-input {
+  .search-input {
     height: 100%;
     padding: 0.5rem 1rem;
     border-top-left-radius: 0.3rem;
@@ -40,13 +41,13 @@
     flex-grow: 1;
   }
 
-  &__search-icon {
+  .search-icon {
     height: 4rem;
     padding: 1rem;
     cursor: pointer;
   }
 
-  &__account-container {
+  .account-container {
     font-size: 1.2rem;
     margin: 0 1.5rem;
     display: flex;
@@ -54,7 +55,7 @@
     column-gap: 1.5rem;
   }
 
-  &__profile-container {
+  .profile-container {
     display: flex;
     flex-direction: column;
 
@@ -63,17 +64,17 @@
       padding: 0.5rem;
       line-height: 1.2;
       cursor: pointer;
-      color: $color-white;
+      color: ${color.white};
       border: 1px solid transparent;
       border-radius: 0.3rem;
     }
 
     &:hover {
-      border: 1px solid $color-white;
+      border: 1px solid ${color.white};
     }
   }
 
-  &__cart-container {
+  .cart-container {
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -84,23 +85,23 @@
     &:visited {
       line-height: 1.2;
       cursor: pointer;
-      color: $color-white;
+      color: ${color.white};
       border: 1px solid transparent;
       border-radius: 0.3rem;
     }
 
     &:hover {
-      border: 1px solid $color-white;
+      border: 1px solid ${color.white};
     }
   }
 
-  &__cart-count {
+  .cart-count {
     position: absolute;
     top: -0.3rem;
     left: 2.3rem;
     width: 2rem;
     height: 2rem;
-    background-color: #f08805;
+    background-color: ${color.yellow300};
     border-radius: 50%;
     padding: 0.4rem;
     line-height: 1;
@@ -109,51 +110,52 @@
     place-items: center;
   }
 
-  &__cart-icon {
+  .cart-icon {
     height: 3rem;
   }
 
-  &__cart-name {
+  .cart-name {
     font-weight: 700;
   }
-}
-
-.header-bottom {
+`;
+export const HeaderBottom = styled.div`
   height: 4rem;
-  color: $color-white;
-  background-color: $bg-header-bottom;
+  color: ${color.white};
+  background-color: ${color.black100};
   display: flex;
   align-items: center;
 
-  &__sidebar-button {
+  .sidebar-button {
     padding: 0.5rem 1rem;
-    color: $color-white;
+    color: ${color.white};
     border: none;
     outline: none;
     background-color: transparent;
     display: flex;
     align-items: center;
     border: 1px solid transparent;
+
     &:hover {
       cursor: pointer;
-      border: 1px solid $color-white;
+      border: 1px solid ${color.white};
     }
   }
 
-  &__menu-icon {
+  .menu-icon {
     height: 2rem;
     margin-right: 0.25rem;
-    color: $color-white;
+    color: ${color.white};
   }
 
-  &__nav-text {
+  .nav-text {
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
     font-weight: 500;
     cursor: pointer;
     border: 1px solid transparent;
+
     &:hover {
-      border: 1px solid $color-white;
+      border: 1px solid ${color.white};
     }
   }
-}
+`;

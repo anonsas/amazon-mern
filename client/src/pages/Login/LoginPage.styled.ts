@@ -1,6 +1,6 @@
-@import '../../app/styles/abstracts/variables.scss';
+import styled from 'styled-components';
 
-.login {
+export const Component = styled.div`
   padding-top: 4rem;
   min-height: 100vh;
   display: flex;
@@ -8,12 +8,12 @@
   align-items: center;
   row-gap: 2rem;
 
-  &__logo {
+  .logo {
     width: 10rem;
     object-fit: contain;
   }
 
-  &__form-container {
+  .form-container {
     width: 30rem;
     padding: 2rem;
     border: 1px solid lightgray;
@@ -23,29 +23,29 @@
     row-gap: 2rem;
   }
 
-  &__form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-
-  &__heading {
+  .heading {
     font-size: 3rem;
     font-weight: 400;
     margin: 0;
   }
 
-  &__form-label {
+  .form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .label {
     font-weight: 500;
   }
 
-  &__form-input {
+  .input {
     height: 3rem;
     width: 100%;
     border: 1px solid darkgray;
   }
 
-  &__signin-btn {
+  .signin-btn {
     height: 3rem;
     width: 100%;
     background-color: #f0c14b;
@@ -58,11 +58,11 @@
     }
   }
 
-  &__paragraph {
+  .paragraph {
     font-size: 1.2rem;
   }
 
-  &__register-btn {
+  .register-btn {
     height: 3rem;
     width: 100%;
     border: 1px solid darkgray;
@@ -71,4 +71,4 @@
     display: grid;
     place-items: center;
   }
-}
+`;

@@ -1,21 +1,12 @@
 import ClampLines from 'react-clamp-lines';
-import './ProductCard.scss';
-import { StarIcons } from '../StarIcons/StarIcons';
 import { IProductList } from 'app/types/ProductList.type';
+import * as Styled from './ProductCard.styled';
 
-export function ProductCard({
-  id,
-  title,
-  price,
-  description,
-  category,
-  image,
-  rating,
-}: IProductList) {
+export function ProductCard({ id, title, price, description, category, image, rating }: IProductList) {
   return (
-    <div className="product">
-      <p className="product__category">{category}</p>
-      <img src={image} alt={title} className="product__image" />
+    <Styled.Component>
+      <p className="category">{category}</p>
+      <img src={image} alt={title} className="image" />
 
       <ClampLines
         id="clam-line-1"
@@ -40,12 +31,12 @@ export function ProductCard({
         // className="product__desc"
         innerElement="p"
       />
-      <div className="product__price">
+      <div className="price-container">
         {/* <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'€'} /> */}
         <p>{price} eur</p>
       </div>
 
       <button className="link">Add to Cart</button>
-    </div>
+    </Styled.Component>
   );
 }
