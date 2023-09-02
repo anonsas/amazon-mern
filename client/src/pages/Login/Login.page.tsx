@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Login.page.scss';
 import images from 'assets/images';
 
-export function LoginPage() {
+export default function LoginPage() {
   const navigate = useNavigate();
 
   const submitFormHandler = (e: React.FormEvent) => {

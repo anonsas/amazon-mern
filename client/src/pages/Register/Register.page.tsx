@@ -6,7 +6,7 @@ import { RegisterFooter } from './components/RegisterFooter/RegisterFooter';
 import { useRegisterForm } from './hooks/useRegisterForm';
 import { useRegisterNewUser } from './hooks/useRegisterNewUser';
 
-export function RegisterPage() {
+export default function RegisterPage() {
   const { mutate, isLoading, isError } = useRegisterNewUser();
 
   const {

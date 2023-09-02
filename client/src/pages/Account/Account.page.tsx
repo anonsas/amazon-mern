@@ -1,7 +1,7 @@
 import React from 'react';
 import './Account.page.scss';
 
-export function AccountPage() {
+export default function AccountPage() {
   // const initialAccountFormState = getInitialAccountFormState(user)
   // const { state, dispatch, Actions } = useFormHandling(initialAccountFormState);
 

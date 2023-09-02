@@ -3,7 +3,7 @@ import { useShoppingListData } from './hooks/useShoppingListData';
 import { Loader, Container, Card } from 'components';
 import { ProductCard } from './components/ProductCard/ProductCard';
 
-export function HomePage() {
+export default function HomePage() {
   const { isLoading, isError, data } = useShoppingListData();
 
   if (isLoading) {
@@ -17,50 +17,26 @@ export function HomePage() {
   return (
     <Container maxWidth="xxl">
       <Styled.ProductsGridLayout>
-        {data.data
-          ?.slice(0, 4)
-          .map(({ id, title, price, description, category, image, rating }) => (
-            <Card>
-              <ProductCard
-                key={id}
-                id={id}
-                title={title}
-                description={description}
-                price={price}
-                category={category}
-                image={image}
-                rating={rating}
-              />
-            </Card>
-          ))}
+        {data.data?.slice(0, 4).map(({ id, title, price, description, category, image, rating }) => (
+          <Card key={id}>
+            <ProductCard
+              id={id}
+              title={title}
+              description={description}
+              price={price}
+              category={category}
+              image={image}
+              rating={rating}
+            />
+          </Card>
+        ))}
 
         {/* <img src={images.adHomepage} className="products-ad" alt="ad" /> */}
 
         <div className="products-item-span-2">
-          {data.data
-            ?.slice(4, 5)
-            .map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
-              <Card>
-                <ProductCard
-                  key={id}
-                  id={id}
-                  title={title}
-                  description={description}
-                  price={price}
-                  category={category}
-                  image={image}
-                  rating={rate}
-                />
-              </Card>
-            ))}
-        </div>
-
-        {data.data
-          ?.slice(5)
-          .map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
-            <Card>
+          {data.data?.slice(4, 5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
+            <Card key={id}>
               <ProductCard
-                key={id}
                 id={id}
                 title={title}
                 description={description}
@@ -71,6 +47,21 @@ export function HomePage() {
               />
             </Card>
           ))}
+        </div>
+
+        {data.data?.slice(5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
+          <Card key={id}>
+            <ProductCard
+              id={id}
+              title={title}
+              description={description}
+              price={price}
+              category={category}
+              image={image}
+              rating={rate}
+            />
+          </Card>
+        ))}
       </Styled.ProductsGridLayout>
     </Container>
   );

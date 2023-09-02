@@ -5,8 +5,7 @@ import { breakpoints } from 'app/utils/breakpoints';
 export const Container = styled.div<Props>`
   display: 'block';
   width: 100%;
-  max-width: ${(props) =>
-    props.maxWidth === 'full' ? 'initial' : breakpoints[props.maxWidth ?? 'xxl']}px;
+  max-width: ${(props) => (props.maxWidth === 'full' ? 'initial' : breakpoints[props.maxWidth ?? 'xxl'])}px;
 
   /* Flex direction */
   ${(props) => {
