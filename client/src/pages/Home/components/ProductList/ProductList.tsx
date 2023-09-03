@@ -1,48 +1,38 @@
 import * as Styled from './ProductList.styled';
-import { IProductList } from 'app/types/ProductList.type';
-import { Card } from 'UI';
 import { ProductCard } from '..';
+import { useShoppingListData } from 'pages/Home/hooks/useShoppingListData';
+import { Loader } from 'UI';
 
-type Props = {
-  data: IProductList[];
-};
+export function ProductList() {
+  const { isLoading, isError, data } = useShoppingListData();
 
-export function ProductList({ data }: Props) {
+  if (isLoading) {
+    return <Loader marginTop="lg" />;
+  }
+
+  if (isError) {
+    return <h2>Error my friend...</h2>;
+  }
+
   return (
     <Styled.Component>
-      {data?.slice(0, 4).map(({ id, title, price, description, category, image, rating }) => (
-        <Card key={id}>
-          <ProductCard
-            id={id}
-            title={title}
-            description={description}
-            price={price}
-            category={category}
-            image={image}
-            rating={rating}
-          />
-        </Card>
+      {data.data?.slice(0, 4).map(({ id, title, price, description, category, image, rating }) => (
+        <ProductCard
+          key={id}
+          id={id}
+          title={title}
+          description={description}
+          price={price}
+          category={category}
+          image={image}
+          rating={rating}
+        />
       ))}
 
       <div className="products-item-span-2">
-        {data?.slice(4, 5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
-          <Card key={id}>
-            <ProductCard
-              id={id}
-              title={title}
-              description={description}
-              price={price}
-              category={category}
-              image={image}
-              rating={rate}
-            />
-          </Card>
-        ))}
-      </div>
-
-      {data?.slice(5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
-        <Card key={id}>
+        {data.data?.slice(4, 5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
           <ProductCard
+            key={id}
             id={id}
             title={title}
             description={description}
@@ -51,7 +41,20 @@ export function ProductList({ data }: Props) {
             image={image}
             rating={rate}
           />
-        </Card>
+        ))}
+      </div>
+
+      {data.data?.slice(5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
+        <ProductCard
+          key={id}
+          id={id}
+          title={title}
+          description={description}
+          price={price}
+          category={category}
+          image={image}
+          rating={rate}
+        />
       ))}
     </Styled.Component>
   );

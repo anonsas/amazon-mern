@@ -1,8 +1,12 @@
 import * as Styled from './Loader.styled';
 
-export function Loader() {
+export type Props = {
+  marginTop?: 'sm' | 'md' | 'lg';
+};
+
+export function Loader({ marginTop }: Props) {
   return (
-    <Styled.Loader>
+    <Styled.Component marginTop={marginTop}>
       <div></div>
       <div></div>
       <div></div>
@@ -15,6 +19,6 @@ export function Loader() {
       <div></div>
       <div></div>
       <div></div>
-    </Styled.Loader>
+    </Styled.Component>
   );
 }

@@ -1,27 +1,49 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { color } from 'app/utils';
+import { Props } from './Loader';
 
-export const Loader = styled.div`
-  margin: 2rem;
-  color: official;
-  display: inline-block;
+export const Component = styled.div<Props>`
   position: relative;
-  width: 8rem;
+  margin: 0 auto;
   height: 8rem;
+  width: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  ${(props) => {
+    if (props.marginTop === 'sm') {
+      return css`
+        margin-top: 2rem;
+      `;
+    }
+    if (props.marginTop === 'md') {
+      return css`
+        margin-top: 4rem;
+      `;
+    }
+    if (props.marginTop === 'lg') {
+      return css`
+        margin-top: 6rem;
+      `;
+    }
+  }}
 
   div {
     transform-origin: 4rem 4rem;
     animation: loading 1.2s linear infinite;
   }
+
   div:after {
     content: ' ';
     display: block;
     position: absolute;
     top: 3px;
     left: 3.7rem;
-    width: 6px;
     height: 1.8rem;
+    width: 0.6rem;
     border-radius: 20%;
-    background: orangered;
+    background: ${color.yellow300};
   }
   div:nth-child(1) {
     transform: rotate(0deg);
