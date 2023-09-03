@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { deviceWidth } from 'app/utils/breakpoints';
 
 export const ProductsGridLayout = styled.div`
-  background-color: #eaeded;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;

@@ -1,14 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-// $max-page-width: 90em; //1440px
-
-// @mixin restrict-max-width($width) {
-//   box-sizing: border-box;
-//   margin: auto;
-//   max-width: $width;
-//   width: 100%;
-// }
-
 export const GlobalStyles = createGlobalStyle`
 *,
 *::after,
@@ -29,7 +20,6 @@ body {
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.4rem;
-  color: blue;
 }
 
 // ::selection {

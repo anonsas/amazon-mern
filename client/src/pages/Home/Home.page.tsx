@@ -1,7 +1,7 @@
 import * as Styled from './Homepage.styled';
 import { useShoppingListData } from './hooks/useShoppingListData';
 import { Loader, Container, Card } from 'components';
-import { ProductCard } from './components';
+import { Banner, ProductCard } from './components';
 
 export default function HomePage() {
   const { isLoading, isError, data } = useShoppingListData();
@@ -16,6 +16,8 @@ export default function HomePage() {
 
   return (
     <Container maxWidth="xxl">
+      <Banner />
+
       <Styled.ProductsGridLayout>
         {data.data?.slice(0, 4).map(({ id, title, price, description, category, image, rating }) => (
           <Card key={id}>
@@ -30,8 +32,6 @@ export default function HomePage() {
             />
           </Card>
         ))}
-
-        {/* <img src={images.adHomepage} className="products-ad" alt="ad" /> */}
 
         <div className="products-item-span-2">
           {data.data?.slice(4, 5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (

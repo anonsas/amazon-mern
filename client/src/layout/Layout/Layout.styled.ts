@@ -16,6 +16,5 @@ export const Component = styled.div`
   .content {
     display: grid;
     place-items: center;
-    max-width: 90em;
   }
 `;
