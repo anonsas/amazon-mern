@@ -1,7 +1,7 @@
 import { lazy, Suspense, FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from 'layout/Layout/Layout';
-import { Loader } from 'components';
+import { Loader } from 'UI';
 
 const withSuspense = <P extends object>(Component: FC<P>) => {
   return (props: P) => (

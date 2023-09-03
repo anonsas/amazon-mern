@@ -14,6 +14,7 @@ export const Component = styled.div`
   }
 
   .content {
+    margin-bottom: 4rem;
     display: grid;
     place-items: center;
   }

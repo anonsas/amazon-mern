@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color } from 'app/utils';
 
 export const Component = styled.div`
   z-index: 30;
@@ -8,8 +9,8 @@ export const Component = styled.div`
   // width: 30rem;
   font-size: 1.4rem;
   padding: 2.5rem;
-  margin: 1.5rem;
-  background-color: var(--white-color);
+  /* margin: 1.5rem; */
+  background-color: ${color.white};
 
   display: flex;
   flex-direction: column;
@@ -19,7 +20,7 @@ export const Component = styled.div`
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    color: #777;
+    color: ${color.black100};
     font-style: italic;
   }
 

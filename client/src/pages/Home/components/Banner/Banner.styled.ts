@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color } from 'app/utils';
 
 export const Component = styled.section`
   position: relative;
@@ -8,7 +9,7 @@ export const Component = styled.section`
     bottom: 0;
     height: 8rem;
     width: 100%;
-    background-image: linear-gradient(to top, #eaeded, transparent);
+    background-image: linear-gradient(to top, ${color.gray100}, transparent);
     z-index: 20;
   }
 
