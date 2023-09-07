@@ -2,6 +2,7 @@ import * as Styled from './ProductList.styled';
 import { ProductCard } from '..';
 import { useShoppingListData } from 'pages/Home/hooks/useShoppingListData';
 import { Loader } from 'UI';
+import images from 'assets/images';
 
 export function ProductList() {
   const { isLoading, isError, data } = useShoppingListData();
@@ -28,6 +29,8 @@ export function ProductList() {
           rating={rating}
         />
       ))}
+
+      <img src={images.adHomepage} className="products-ad" alt="ad" />
 
       <div className="products-item-span-2">
         {data.data?.slice(4, 5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (

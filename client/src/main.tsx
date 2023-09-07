@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { App } from './app/App';
 import 'normalize.css';
-import { GlobalStyles } from 'app/styles/global.styled';
+import { GlobalStyles } from 'main.styled';
 
 const queryClient = new QueryClient();
 

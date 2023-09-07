@@ -11,7 +11,7 @@ export const Component = styled.div`
   gap: 4rem;
 
   @media ${deviceWidth.md_up} {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   @media ${deviceWidth.lg_up} {
     grid-template-columns: repeat(3, 1fr);
@@ -26,7 +26,7 @@ export const Component = styled.div`
   }
 
   .products-item-span-2 {
-    @include respond(md) {
+    @media ${deviceWidth.md_up} {
       grid-column: 1 / 3;
     }
   }

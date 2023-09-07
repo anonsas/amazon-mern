@@ -4,8 +4,8 @@ import banner1 from './banner/banner-1.jpg';
 import banner2 from './banner/banner-2.jpg';
 import banner3 from './banner/banner-3.jpg';
 import banner4 from './banner/banner-4.jpg';
-// import adHomepage from './banner/ads-homepage.jpg';
-// import adCheckout from './banner/ads-checkout.png';
+import adHomepage from './ad/ad-homepage.jpg';
+import adCheckout from './ad/ad-checkout.png';
 import cartIcon from './icon/cart.svg';
 import menuIcon from './icon/menu.svg';
 import searchIcon from './icon/search.svg';
@@ -25,8 +25,8 @@ const images = {
   banner2,
   banner3,
   banner4,
-  // adHomepage,
-  // adCheckout,
+  adHomepage,
+  adCheckout,
   cartIcon,
   menuIcon,
   searchIcon,
