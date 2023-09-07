@@ -33,7 +33,7 @@ export function ProductList() {
       <img src={images.adHomepage} className="products-ad" alt="ad" />
 
       <div className="products-item-span-2">
-        {data.data?.slice(4, 5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
+        {data.data?.slice(4, 5).map(({ id, title, price, description, category, image, rating }) => (
           <ProductCard
             key={id}
             id={id}
@@ -42,12 +42,12 @@ export function ProductList() {
             price={price}
             category={category}
             image={image}
-            rating={rate}
+            rating={rating}
           />
         ))}
       </div>
 
-      {data.data?.slice(5).map(({ id, title, price, description, category, image, rating: { rate } }: any) => (
+      {data.data?.slice(5).map(({ id, title, price, description, category, image, rating }) => (
         <ProductCard
           key={id}
           id={id}
@@ -56,7 +56,7 @@ export function ProductList() {
           price={price}
           category={category}
           image={image}
-          rating={rate}
+          rating={rating}
         />
       ))}
     </Styled.Component>

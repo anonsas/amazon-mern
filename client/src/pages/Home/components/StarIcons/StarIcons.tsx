@@ -1,20 +1,21 @@
-import { useState } from 'react';
 import { AiFillStar } from 'react-icons/ai';
+import * as Styled from './StarIcons.styled';
 
 type Props = {
   rating: number;
 };
 
 export function StarIcons({ rating }: Props) {
-  const [ratingStars] = useState(Math.ceil(rating));
+  const ratingNumber = Math.ceil(isFinite(rating) ? rating : 0);
+  const stars = Array(ratingNumber).fill(null);
+
+  console.log('stars', stars);
 
   return (
-    <div className="stars-container">
-      {Array(ratingStars)
-        .fill(null)
-        .map((_, i) => (
-          <AiFillStar key={i} className="star-icon" style={{ height: '2rem', color: '#febd69' }} />
-        ))}
-    </div>
+    <Styled.Component>
+      {stars.map((_, i) => (
+        <AiFillStar key={i} className="star-icon" />
+      ))}
+    </Styled.Component>
   );
 }

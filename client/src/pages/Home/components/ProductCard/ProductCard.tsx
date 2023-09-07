@@ -1,36 +1,27 @@
-import ClampLines from 'react-clamp-lines';
+import { useState, useCallback } from 'react';
 import { IProductList } from 'app/types/ProductList.type';
 import * as Styled from './ProductCard.styled';
+import { StarIcons } from '..';
 
 export function ProductCard({ id, title, price, description, category, image, rating }: IProductList) {
+  const [isFullDescription, setIsFullDescription] = useState(false);
+
+  const descriptionLength = description.length >= 500;
+  const shortDescription = descriptionLength ? description.slice(0, 500) + '...' : description;
+
+  const toggleDescription = useCallback((isFullDescription: boolean) => setIsFullDescription(!isFullDescription), []);
+
   return (
     <Styled.Component>
       <p className="category">{category}</p>
       <img src={image} alt={title} className="image" />
 
-      <ClampLines
-        id="clam-line-1"
-        text={description}
-        lines={1}
-        ellipsis="..."
-        // moreText={false}
-        // lessText={false}
-        // className="product__title"
-        innerElement="h4"
-      />
+      <h3>{title}</h3>
 
-      {/* <StarIcons rating={rating.rate} /> */}
+      <StarIcons rating={rating.rate} />
 
-      <ClampLines
-        id="clam-line-2"
-        text={description}
-        lines={2}
-        ellipsis="..."
-        // moreText={false}
-        // lessText={false}
-        // className="product__desc"
-        innerElement="p"
-      />
+      <p>{description}</p>
+
       <div className="price-container">
         {/* <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'€'} /> */}
         <p>{price} eur</p>
