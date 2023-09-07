@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { deviceWidth } from 'app/utils/breakpoints';
 
-export const Component = styled.div`
+export const Component = styled.ul`
   margin-top: -20rem;
   padding: 0 2.5rem;
 
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
   grid-auto-flow: dense;
   gap: 4rem;
 

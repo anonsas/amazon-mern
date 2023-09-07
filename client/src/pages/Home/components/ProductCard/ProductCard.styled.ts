@@ -1,20 +1,25 @@
 import styled from 'styled-components';
-import { color } from 'app/utils';
+import { color, deviceWidth } from 'app/utils';
 
-export const Component = styled.div`
+export const Component = styled.li`
   z-index: 30;
   position: relative;
   height: auto;
-  // height: 42rem;
-  // width: 30rem;
+  /* height: 45rem; */
+  height: auto;
+  width: 100%;
   font-size: 1.4rem;
   padding: 2.5rem;
-  /* margin: 1.5rem; */
   background-color: ${color.white};
 
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+  display: grid;
+  grid-template-rows: 20rem 1fr;
+  justify-content: space-between;
+  row-gap: 2rem;
+
+  @media ${deviceWidth.md_down} {
+    max-width: 40rem;
+  }
 
   .category {
     position: absolute;
@@ -28,10 +33,26 @@ export const Component = styled.div`
     height: 20rem;
     width: 20rem;
     object-fit: contain;
-    align-self: center;
+    justify-self: center;
   }
 
-  .price-container {
-    margin-bottom: 1rem;
+  .description {
+    display: inline;
   }
+
+  .description-button {
+    display: inline;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  /* .price-container {
+    margin-bottom: 1rem;
+  } */
 `;

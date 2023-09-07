@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { IProductList } from 'app/types/ProductList.type';
 import * as Styled from './ProductCard.styled';
 import { StarIcons } from '..';
@@ -6,28 +6,35 @@ import { StarIcons } from '..';
 export function ProductCard({ id, title, price, description, category, image, rating }: IProductList) {
   const [isFullDescription, setIsFullDescription] = useState(false);
 
-  const descriptionLength = description.length >= 500;
-  const shortDescription = descriptionLength ? description.slice(0, 500) + '...' : description;
-
-  const toggleDescription = useCallback((isFullDescription: boolean) => setIsFullDescription(!isFullDescription), []);
+  const descriptionLength = description.length >= 170;
+  const shortDescription = descriptionLength ? description.slice(0, 170) + '...' : description;
 
   return (
     <Styled.Component>
       <p className="category">{category}</p>
       <img src={image} alt={title} className="image" />
 
-      <h3>{title}</h3>
+      <div>
+        <h3>{title}</h3>
 
-      <StarIcons rating={rating.rate} />
+        <StarIcons rating={rating.rate} />
 
-      <p>{description}</p>
+        <div className="description-container">
+          <p className="description">{isFullDescription ? description : shortDescription}</p>
+          {descriptionLength && (
+            <button className="description-button" onClick={() => setIsFullDescription(!isFullDescription)}>
+              {isFullDescription ? 'Read less' : 'Read more'}
+            </button>
+          )}
+        </div>
 
-      <div className="price-container">
-        {/* <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'€'} /> */}
-        <p>{price} eur</p>
+        <div className="price-container">
+          {/* <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'€'} /> */}
+          <p>{price} eur</p>
+        </div>
+
+        <button className="link">Add to Cart</button>
       </div>
-
-      <button className="link">Add to Cart</button>
     </Styled.Component>
   );
 }
