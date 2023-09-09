@@ -1,13 +1,17 @@
 import { useState } from 'react';
-import { IProductList } from 'app/types/ProductList.type';
+import { IProduct } from 'app/types/Product.type';
 import * as Styled from './ProductCard.styled';
 import { StarIcons } from '..';
 
-export function ProductCard({ id, title, price, description, category, image, rating }: IProductList) {
-  const [isFullDescription, setIsFullDescription] = useState(false);
+export function ProductCard({ id, title, price, description, category, image, rating }: IProduct) {
+  const [showFullTitle, setShowFullTitle] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
 
-  const descriptionLength = description.length >= 170;
-  const shortDescription = descriptionLength ? description.slice(0, 170) + '...' : description;
+  const titleLength = title.length >= 20;
+  const shortTitle = titleLength ? title.slice(0, 40) + '...' : description;
+
+  const descriptionLength = description.length >= 60;
+  const shortDescription = descriptionLength ? description.slice(0, 90) + '...' : description;
 
   return (
     <Styled.Component>
@@ -15,17 +19,27 @@ export function ProductCard({ id, title, price, description, category, image, ra
       <img src={image} alt={title} className="image" />
 
       <div>
+        <h3>
+          {showFullTitle ? title : shortTitle}{' '}
+          {titleLength && (
+            <button onClick={() => setShowFullTitle(!showFullTitle)}>
+              {showFullTitle ? 'Read less' : 'Read more'}
+            </button>
+          )}
+        </h3>
         <h3>{title}</h3>
 
         <StarIcons rating={rating.rate} />
 
         <div className="description-container">
-          <p className="description">{isFullDescription ? description : shortDescription}</p>
-          {descriptionLength && (
-            <button className="description-button" onClick={() => setIsFullDescription(!isFullDescription)}>
-              {isFullDescription ? 'Read less' : 'Read more'}
-            </button>
-          )}
+          <p className="description">
+            {showFullDescription ? description : shortDescription}{' '}
+            {descriptionLength && (
+              <button className="description-button" onClick={() => setShowFullDescription(!showFullDescription)}>
+                {showFullDescription ? 'Read less' : 'Read more'}
+              </button>
+            )}
+          </p>
         </div>
 
         <div className="price-container">

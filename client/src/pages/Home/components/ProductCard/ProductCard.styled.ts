@@ -37,11 +37,12 @@ export const Component = styled.li`
   }
 
   .description {
-    display: inline;
+    display: inline-block;
+    width: 100%;
   }
 
   .description-button {
-    display: inline;
+    display: inline-block;
     border: none;
     background-color: transparent;
     text-decoration: underline;
