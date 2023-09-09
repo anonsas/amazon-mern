@@ -40,8 +40,9 @@ a {
   color: inherit;
 }
 
-input {
+input, button {
   border: none;
   outline: none;
+  background-color: transparent;
 }
 `;

@@ -43,10 +43,8 @@ export const Component = styled.li`
 
   .description-button {
     display: inline-block;
-    border: none;
-    background-color: transparent;
-    text-decoration: underline;
     margin-left: 0.5rem;
+    text-decoration: underline;
 
     &:hover {
       cursor: pointer;

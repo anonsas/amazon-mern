@@ -1,9 +1,9 @@
 import * as Styled from './ProductList.styled';
+import { IProduct } from 'app/types';
 import { ProductCard } from '..';
 import { useShoppingListData } from 'pages/Home/hooks/useShoppingListData';
 import { Loader } from 'UI';
 import images from 'assets/images';
-import { IProduct } from 'app/types/Product.type';
 
 const generateProductCard = ({ id, title, price, description, category, image, rating }: IProduct) => (
   <ProductCard
@@ -20,6 +20,8 @@ const generateProductCard = ({ id, title, price, description, category, image, r
 
 export function ProductList() {
   const { isLoading, isError, data } = useShoppingListData();
+
+  console.log();
 
   if (isLoading) {
     return <Loader marginTop="lg" />;

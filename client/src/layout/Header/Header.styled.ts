@@ -38,6 +38,7 @@ export const HeaderTop = styled.div`
     padding: 0.5rem 1rem;
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius: 0.3rem;
+    background-color: ${color.white};
     flex-grow: 1;
   }
 

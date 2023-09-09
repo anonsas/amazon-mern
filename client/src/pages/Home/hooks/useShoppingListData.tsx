@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
-import { IProductList } from 'app/types/Product.type';
+import { IProduct } from 'app/types';
 
 const fetchShoppingList = () => {
-  return axios.get<IProductList[]>('https://fakestoreapi.com/products');
+  return axios.get<IProduct[]>('http://localhost:5001/api/products');
 };
 
 export function useShoppingListData(onSuccess?: any, onError?: any) {

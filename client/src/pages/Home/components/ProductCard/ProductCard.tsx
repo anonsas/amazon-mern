@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IProduct } from 'app/types/Product.type';
+import { IProduct } from 'app/types';
 import * as Styled from './ProductCard.styled';
 import { StarIcons } from '..';
 
@@ -7,8 +7,10 @@ export function ProductCard({ id, title, price, description, category, image, ra
   const [showFullTitle, setShowFullTitle] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
 
+  console.log('title', title);
+
   const titleLength = title.length >= 20;
-  const shortTitle = titleLength ? title.slice(0, 40) + '...' : description;
+  const shortTitle = titleLength ? title.slice(0, 40) + '...' : title;
 
   const descriptionLength = description.length >= 60;
   const shortDescription = descriptionLength ? description.slice(0, 90) + '...' : description;
@@ -27,7 +29,6 @@ export function ProductCard({ id, title, price, description, category, image, ra
             </button>
           )}
         </h3>
-        <h3>{title}</h3>
 
         <StarIcons rating={rating.rate} />
 
