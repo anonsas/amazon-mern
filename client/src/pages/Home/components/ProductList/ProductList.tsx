@@ -21,8 +21,6 @@ const generateProductCard = ({ id, title, price, description, category, image, r
 export function ProductList() {
   const { isLoading, isError, data } = useShoppingListData();
 
-  console.log();
-
   if (isLoading) {
     return <Loader marginTop="lg" />;
   }

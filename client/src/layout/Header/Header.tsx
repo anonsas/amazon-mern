@@ -2,11 +2,17 @@ import { Link } from 'react-router-dom';
 import images from 'assets/images';
 import * as Styled from './Header.styled';
 import { HEADER_BOTTOM_LINKS } from 'app/data';
+import { AiOutlineMenu, AiOutlineUser } from 'react-icons/ai';
 
 export function Header() {
   return (
     <header>
-      <Styled.HeaderTop>
+      {/* BurgerMenu Logo Sign-In Cart*/}
+      {/* Search* /}
+      {/* HeaderBottom */}
+      {/* DeliverTo */}
+
+      {/* <Styled.HeaderTop>
         <Link to="/" className="logo-container">
           <img src={images.logoLight} alt="logo" className="logo" />
         </Link>
@@ -44,7 +50,7 @@ export function Header() {
             {linkName}
           </li>
         ))}
-      </Styled.HeaderBottom>
+      </Styled.HeaderBottom> */}
     </header>
   );
 }

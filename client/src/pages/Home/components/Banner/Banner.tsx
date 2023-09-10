@@ -4,21 +4,16 @@ import images from 'assets/images';
 import { Component } from './Banner.styled';
 
 export function Banner() {
+  const imageList = [images.banner1, images.banner2, images.banner3, images.banner4];
+
   return (
     <Component>
       <Carousel autoPlay infiniteLoop showStatus={false} showIndicators={false} showThumbs={false} interval={5000}>
-        <figure>
-          <img src={images.banner1} alt="banner" />
-        </figure>
-        <figure>
-          <img src={images.banner2} alt="banner" />
-        </figure>
-        <figure>
-          <img src={images.banner3} alt="banner" />
-        </figure>
-        <figure>
-          <img src={images.banner4} alt="banner" />
-        </figure>
+        {imageList.map((img, index) => (
+          <figure key={index}>
+            <img src={img} alt="banner" />
+          </figure>
+        ))}
       </Carousel>
       <div className="gradient" />
     </Component>

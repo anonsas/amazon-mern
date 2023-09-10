@@ -4,10 +4,10 @@ export type Props = {
   marginTop?: 'sm' | 'md' | 'lg';
 };
 
-export function Loader({ marginTop = 'sm' }: Props) {
-  console.log('marginTop', marginTop);
+export function Loader(props: Props) {
+  const { ...rest } = props;
   return (
-    <Styled.Component marginTop={marginTop}>
+    <Styled.Component {...rest}>
       <div></div>
       <div></div>
       <div></div>

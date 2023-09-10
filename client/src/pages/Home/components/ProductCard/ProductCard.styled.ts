@@ -19,7 +19,7 @@ export const Component = styled.li`
     width: 28rem;
   }
   @media ${deviceWidth.xl_up} {
-    width: 30rem;
+    width: 32rem;
   }
 
   .category {
@@ -51,8 +51,4 @@ export const Component = styled.li`
       cursor: pointer;
     }
   }
-
-  /* .price-container {
-    margin-bottom: 1rem;
-  } */
 `;

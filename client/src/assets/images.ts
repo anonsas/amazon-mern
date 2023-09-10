@@ -6,10 +6,13 @@ import banner3 from './banner/banner-3.jpg';
 import banner4 from './banner/banner-4.jpg';
 import adHomepage from './ad/ad-homepage.jpg';
 import adCheckout from './ad/ad-checkout.png';
+import userIcon from './icon/user.svg';
 import cartIcon from './icon/cart.svg';
 import menuIcon from './icon/menu.svg';
 import searchIcon from './icon/search.svg';
+import starIcon from './icon/star-icon.svg';
 import arrowUp from './icon/arrow-up.svg';
+import arrowRight from './icon/arrow-right.svg';
 import arrowDown from './icon/arrow-down.svg';
 import checkCircle from './icon/check-circle.svg';
 import checkCircleGreen from './icon/check-circle-green.svg';
@@ -27,10 +30,13 @@ const images = {
   banner4,
   adHomepage,
   adCheckout,
+  userIcon,
   cartIcon,
   menuIcon,
   searchIcon,
+  starIcon,
   arrowUp,
+  arrowRight,
   arrowDown,
   checkCircle,
   checkCircleGreen,

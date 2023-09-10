@@ -1,5 +1,5 @@
-import { AiFillStar } from 'react-icons/ai';
 import * as Styled from './StarIcons.styled';
+import images from 'assets/images';
 
 type Props = {
   rating: number;
@@ -12,7 +12,7 @@ export function StarIcons({ rating }: Props) {
   return (
     <Styled.Component>
       {stars.map((_, i) => (
-        <AiFillStar key={i} className="star-icon" />
+        <img src={images.starIcon} key={i} className="star-icon" />
       ))}
     </Styled.Component>
   );
