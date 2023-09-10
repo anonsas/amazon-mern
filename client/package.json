@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
     "build:storybook": "node ./scripts/storybook.js",
     "test:unit": "vitest",
     "test:unit:coverage": "vitest run --coverage",
@@ -24,7 +23,6 @@
     "playwright": "^1.36.2",
     "prettier": "^2.8.8",
     "react": "^18.2.0",
-    "react-clamp-lines": "^3.0.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-responsive-carousel": "^3.2.23",
