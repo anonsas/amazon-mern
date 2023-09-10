@@ -4,13 +4,10 @@ import * as Styled from './ProductCard.styled';
 import { StarIcons } from '..';
 
 export function ProductCard({ id, title, price, description, category, image, rating }: IProduct) {
-  const [showFullTitle, setShowFullTitle] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
 
-  console.log('title', title);
-
-  const titleLength = title.length >= 20;
-  const shortTitle = titleLength ? title.slice(0, 40) + '...' : title;
+  const titleLength = title.length >= 55;
+  const shortTitle = titleLength ? title.slice(0, 55) + '...' : title;
 
   const descriptionLength = description.length >= 60;
   const shortDescription = descriptionLength ? description.slice(0, 90) + '...' : description;
@@ -21,14 +18,7 @@ export function ProductCard({ id, title, price, description, category, image, ra
       <img src={image} alt={title} className="image" />
 
       <div>
-        <h3>
-          {showFullTitle ? title : shortTitle}{' '}
-          {titleLength && (
-            <button onClick={() => setShowFullTitle(!showFullTitle)}>
-              {showFullTitle ? 'Read less' : 'Read more'}
-            </button>
-          )}
-        </h3>
+        <h3>{titleLength ? shortTitle : title}</h3>
 
         <StarIcons rating={rating.rate} />
 

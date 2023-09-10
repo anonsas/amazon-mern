@@ -20,6 +20,6 @@ export const deviceWidth = {
   lg_up: `(min-width: ${breakpoints.lg}px)`,
   xl_down: `(max-width: ${breakpoints.xl - 1}px)`,
   xl_up: `(min-width: ${breakpoints.xl}px)`,
-  xxl_down: `(max-width: ${breakpoints.xs - 1}px)`,
-  xxl_up: `(min-width: ${breakpoints.xs}px)`,
+  xxl_down: `(max-width: ${breakpoints.xxl - 1}px)`,
+  xxl_up: `(min-width: ${breakpoints.xxl}px)`,
 };

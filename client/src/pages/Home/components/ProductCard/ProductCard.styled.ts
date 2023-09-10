@@ -5,9 +5,7 @@ export const Component = styled.li`
   z-index: 30;
   position: relative;
   height: auto;
-  /* height: 45rem; */
-  height: auto;
-  width: 100%;
+  width: 26rem;
   font-size: 1.4rem;
   padding: 2.5rem;
   background-color: ${color.white};
@@ -17,8 +15,11 @@ export const Component = styled.li`
   justify-content: space-between;
   row-gap: 2rem;
 
-  @media ${deviceWidth.md_down} {
-    max-width: 40rem;
+  @media ${deviceWidth.md_up} {
+    width: 28rem;
+  }
+  @media ${deviceWidth.xl_up} {
+    width: 30rem;
   }
 
   .category {

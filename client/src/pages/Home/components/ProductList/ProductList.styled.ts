@@ -11,13 +11,13 @@ export const Component = styled.ul`
   grid-auto-flow: dense;
   gap: 4rem;
 
-  @media ${deviceWidth.md_up} {
+  @media ${deviceWidth.sm_up} {
     grid-template-columns: repeat(2, 1fr);
   }
   @media ${deviceWidth.lg_up} {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media ${deviceWidth.xl_up} {
+  @media ${deviceWidth.xxl_up} {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -27,7 +27,12 @@ export const Component = styled.ul`
   }
 
   .products-item-span-2 {
+    li {
+      width: 100%;
+    }
+
     @media ${deviceWidth.md_up} {
+      width: 100%;
       grid-column: 1 / 3;
     }
   }

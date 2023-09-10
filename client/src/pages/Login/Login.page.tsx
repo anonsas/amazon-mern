@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom';
-import './Login.page.scss';
 import images from 'assets/images';
 import * as Styled from './LoginPage.styled';
 
