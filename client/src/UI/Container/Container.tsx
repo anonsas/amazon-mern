@@ -3,7 +3,7 @@ import { Breakpoints } from 'app/utils/breakpoints';
 import * as Styled from './Container.styled';
 
 export type Props = {
-  maxWidth?: Breakpoints | 'full';
+  $maxWidth?: Breakpoints | 'full';
   flexDirection?: 'row' | 'column' | 'rowReverse' | 'columnReverse';
   alignItems?: CSSProperties['alignItems'];
   justifyContent?: CSSProperties['justifyContent'];

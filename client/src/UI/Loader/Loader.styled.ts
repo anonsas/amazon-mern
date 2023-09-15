@@ -12,17 +12,17 @@ export const Component = styled.div<Props>`
   justify-content: center;
 
   ${(props) => {
-    if (props.marginTop === 'sm') {
+    if (props.$marginTop === 'sm') {
       return css`
         margin-top: 2rem;
       `;
     }
-    if (props.marginTop === 'md') {
+    if (props.$marginTop === 'md') {
       return css`
         margin-top: 4rem;
       `;
     }
-    if (props.marginTop === 'lg') {
+    if (props.$marginTop === 'lg') {
       return css`
         margin-top: 6rem;
       `;

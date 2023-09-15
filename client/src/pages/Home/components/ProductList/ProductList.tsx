@@ -22,7 +22,7 @@ export function ProductList() {
   const { isLoading, isError, data } = useShoppingListData();
 
   if (isLoading) {
-    return <Loader marginTop="lg" />;
+    return <Loader $marginTop="lg" />;
   }
 
   if (isError) {

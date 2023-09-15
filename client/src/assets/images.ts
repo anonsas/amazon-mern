@@ -10,12 +10,12 @@ import userIcon from './icon/user.svg';
 import cartIcon from './icon/cart.svg';
 import menuIcon from './icon/menu.svg';
 import searchIcon from './icon/search.svg';
-import starIcon from './icon/star-icon.svg';
-import arrowUp from './icon/arrow-up.svg';
-import arrowRight from './icon/arrow-right.svg';
-import arrowDown from './icon/arrow-down.svg';
-import checkCircle from './icon/check-circle.svg';
-import checkCircleGreen from './icon/check-circle-green.svg';
+import starIcon from './icon/star.svg';
+import arrowUpIcon from './icon/arrow-up.svg';
+import arrowRightIcon from './icon/arrow-right.svg';
+import arrowDownIcon from './icon/arrow-down.svg';
+import checkCircleIcon from './icon/check-circle.svg';
+import checkCircleIconGreen from './icon/check-circle-green.svg';
 import instagramIconLight from './icon/instagram-light.svg';
 import facebookIconLight from './icon/facebook-light.svg';
 import youtubeIconLight from './icon/youtube-light.svg';
@@ -35,11 +35,11 @@ const images = {
   menuIcon,
   searchIcon,
   starIcon,
-  arrowUp,
-  arrowRight,
-  arrowDown,
-  checkCircle,
-  checkCircleGreen,
+  arrowUpIcon,
+  arrowRightIcon,
+  arrowDownIcon,
+  checkCircleIcon,
+  checkCircleIconGreen,
   instagramIconLight,
   facebookIconLight,
   youtubeIconLight,
