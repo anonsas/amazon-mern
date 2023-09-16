@@ -3,7 +3,7 @@ import './Card.styled';
 import { Breakpoints } from 'app/utils/breakpoints';
 import * as Styled from './Card.styled';
 
-type Props = {
+export type Props = {
   maxWidth?: Breakpoints;
   shadow?: 'sm' | 'md';
   padding?: 'sm' | 'md';

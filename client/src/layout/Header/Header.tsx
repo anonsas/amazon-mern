@@ -11,8 +11,7 @@ export function Header() {
       {/* Search* /}
       {/* HeaderBottom */}
       {/* DeliverTo */}
-
-      {/* <Styled.HeaderTop>
+      <Styled.HeaderTop>
         <Link to="/" className="logo-container">
           <img src={images.logoLight} alt="logo" className="logo" />
         </Link>
@@ -50,7 +49,7 @@ export function Header() {
             {linkName}
           </li>
         ))}
-      </Styled.HeaderBottom> */}
+      </Styled.HeaderBottom>
     </header>
   );
 }

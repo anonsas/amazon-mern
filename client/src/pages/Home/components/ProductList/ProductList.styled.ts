@@ -3,12 +3,13 @@ import { deviceWidth } from 'app/utils/breakpoints';
 
 export const Component = styled.ul`
   margin-top: -20rem;
-  padding: 0 2.5rem;
+  margin-bottom: 4rem;
 
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   grid-auto-flow: dense;
+  justify-content: space-between;
   gap: 4rem;
 
   @media ${deviceWidth.sm_up} {
@@ -24,16 +25,5 @@ export const Component = styled.ul`
   .products-ad {
     width: 100%;
     grid-column: 1 / -1;
-  }
-
-  .products-item-span-2 {
-    li {
-      width: 100%;
-    }
-
-    @media ${deviceWidth.md_up} {
-      width: 100%;
-      grid-column: 1 / 3;
-    }
   }
 `;

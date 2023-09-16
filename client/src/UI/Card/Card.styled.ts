@@ -1,15 +1,56 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { color } from 'app/utils';
+import { Props } from './Card';
 
-export const Card = styled.div`
+export const Card = styled.div<Props>`
   z-index: 30;
   position: relative;
   height: auto;
-  font-size: 1.4rem;
   padding: 2.5rem;
-  background-color: ${color.white};
 
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+
+  // Shadow
+  ${(props) => {
+    if (props.shadow === 'sm') {
+      return css`
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      `;
+    }
+    if (props.shadow === 'md') {
+      return css`
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      `;
+    }
+  }}
+
+  // Padding
+    ${(props) => {
+    if (props.padding === 'sm') {
+      return css`
+        padding: 1.5rem;
+      `;
+    }
+    if (props.padding === 'md') {
+      return css`
+        padding: 2rem;
+      `;
+    }
+    if (props.padding === 'lg') {
+      return css`
+        padding: 2.5rem;
+      `;
+    }
+  }}
+
+    // Background color
+  ${(props) => {
+    if (props.backgroundColor === 'white') {
+      return css`
+        background-color: ${color.white};
+      `;
+    }
+  }}
 `;

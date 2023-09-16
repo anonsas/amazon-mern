@@ -9,13 +9,8 @@ export const Component = styled.div`
 
   .content-container {
     flex: 1;
-    padding: 0 1.6rem;
     background-color: ${color.gray100};
-  }
-
-  .content {
-    margin-bottom: 4rem;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
   }
 `;

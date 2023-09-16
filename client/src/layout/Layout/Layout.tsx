@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import * as Styled from './Layout.styled';
 import { Header } from '../Header/Header';
 import { Footer } from '../Footer/Footer';
+import { Container } from 'UI';
 
 export function Layout() {
   const location = useLocation();
@@ -16,11 +17,11 @@ export function Layout() {
   return (
     <Styled.Component>
       <Header />
-      <div className="content-container">
-        <div className="content">
+      <main className="content-container">
+        <Container $maxWidth="xxl">
           <Outlet />
-        </div>
-      </div>
+        </Container>
+      </main>
       <Footer />
     </Styled.Component>
   );
