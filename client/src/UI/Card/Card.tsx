@@ -5,8 +5,8 @@ import * as Styled from './Card.styled';
 
 export type Props = {
   maxWidth?: Breakpoints;
-  shadow?: 'sm' | 'md';
-  padding?: 'sm' | 'md';
+  shadow?: 'md';
+  padding?: 'md' | 'lg';
   backgroundColor?: 'white' | 'beige' | 'light-purple' | 'blue' | 'grey';
   children: ReactNode;
 };

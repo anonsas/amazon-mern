@@ -1,26 +1,11 @@
 import styled from 'styled-components';
-import { color, deviceWidth } from 'app/utils';
+import { color } from 'app/utils';
 
 export const Component = styled.li`
-  z-index: 30;
-  position: relative;
-  height: auto;
-  width: 26rem;
-  font-size: 1.4rem;
-  padding: 2.5rem;
-  background-color: ${color.white};
-
   display: grid;
   grid-template-rows: 20rem 1fr;
   justify-content: space-between;
   row-gap: 2rem;
-
-  @media ${deviceWidth.md_up} {
-    width: 28rem;
-  }
-  @media ${deviceWidth.xl_up} {
-    width: 32rem;
-  }
 
   .category {
     position: absolute;
