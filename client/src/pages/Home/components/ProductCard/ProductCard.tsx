@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { IProduct } from 'app/types';
 import * as Styled from './ProductCard.styled';
 import { StarIcons } from '..';
-import { Card } from 'UI';
+import { Card, Button } from 'UI';
+import images from 'assets/images';
 
 export function ProductCard({ id, title, price, description, category, image, rating }: IProduct) {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -40,7 +41,12 @@ export function ProductCard({ id, title, price, description, category, image, ra
             <p>{price} eur</p>
           </div>
 
-          <button className="order-button">Add to Cart</button>
+          <Button
+            variant="primary"
+            text="Add to Cart"
+            $borderRadius="sm"
+            $handleClick={() => console.log('add to cart')}
+          />
         </div>
       </Styled.Component>
     </Card>
