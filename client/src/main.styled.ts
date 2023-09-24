@@ -16,7 +16,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.4rem;

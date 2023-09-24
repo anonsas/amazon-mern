@@ -23,8 +23,9 @@ export function Header() {
 
         <div className="account-container">
           <Link to={'/login'} className="profile-container">
-            <span>Hello, sign in</span>
-            <span>Account & Lists</span>
+            <span>Hello, Guest</span>
+            <span>Sign In</span>
+            {/* <span>Account & Lists</span> */}
           </Link>
 
           <Link to="/orders" className="profile-container">

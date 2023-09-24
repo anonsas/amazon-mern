@@ -54,7 +54,7 @@ export const Button = styled.button<Props>`
 
   // Variant
   ${(props) => {
-    if (props.variant === 'primary') {
+    if (props.$variant === 'primary') {
       return css`
         color: ${color.black100};
         background-image: linear-gradient(to bottom, rgb(254 240 138), rgb(250 204 21));
@@ -70,7 +70,7 @@ export const Button = styled.button<Props>`
         }
       `;
     }
-    if (props.variant === 'secondary') {
+    if (props.$variant === 'secondary') {
       return css`
         color: ${color.yellow200};
         background-color: transparent;

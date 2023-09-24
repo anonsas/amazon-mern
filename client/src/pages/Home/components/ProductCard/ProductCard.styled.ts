@@ -22,6 +22,12 @@ export const Component = styled.li`
     justify-self: center;
   }
 
+  .details-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
   .description {
     display: inline-block;
     width: 100%;

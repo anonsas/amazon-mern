@@ -6,7 +6,6 @@ export const Card = styled.div<Props>`
   z-index: 30;
   position: relative;
 
-  height: 42rem;
   width: 26rem;
   padding: 1.5rem;
   background-color: ${color.white};
@@ -21,7 +20,7 @@ export const Card = styled.div<Props>`
 
   // Shadow
   ${(props) => {
-    if (props.shadow === 'md') {
+    if (props.$shadow === 'md') {
       return css`
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
       `;
@@ -30,12 +29,12 @@ export const Card = styled.div<Props>`
 
   // Padding
     ${(props) => {
-    if (props.padding === 'md') {
+    if (props.$padding === 'md') {
       return css`
         padding: 2rem;
       `;
     }
-    if (props.padding === 'lg') {
+    if (props.$padding === 'lg') {
       return css`
         padding: 2.5rem;
       `;
@@ -44,7 +43,7 @@ export const Card = styled.div<Props>`
 
     // Background color
   ${(props) => {
-    if (props.backgroundColor === 'white') {
+    if (props.$backgroundColor === 'white') {
       return css`
         background-color: ${color.white};
       `;

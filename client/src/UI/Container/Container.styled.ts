@@ -8,25 +8,25 @@ export const Container = styled.div<Props>`
 
   /* Flex direction */
   ${(props) => {
-    if (props.flexDirection === 'row') {
+    if (props.$flexDirection === 'row') {
       return css`
         display: flex;
         flex-direction: row;
       `;
     }
-    if (props.flexDirection === 'column') {
+    if (props.$flexDirection === 'column') {
       return css`
         display: flex;
         flex-direction: column;
       `;
     }
-    if (props.flexDirection === 'rowReverse') {
+    if (props.$flexDirection === 'rowReverse') {
       return css`
         display: flex;
         flex-direction: row-reverse;
       `;
     }
-    if (props.flexDirection === 'columnReverse') {
+    if (props.$flexDirection === 'columnReverse') {
       return css`
         display: flex;
         flex-direction: column-reverse;
@@ -36,19 +36,19 @@ export const Container = styled.div<Props>`
 
   /* Gap */
   ${(props) => {
-    if (props.gap === 'sm') {
+    if (props.$gap === 'sm') {
       return css`
         display: flex;
         gap: 1rem;
       `;
     }
-    if (props.gap === 'md') {
+    if (props.$gap === 'md') {
       return css`
         display: flex;
         gap: 1.5rem;
       `;
     }
-    if (props.gap === 'lg') {
+    if (props.$gap === 'lg') {
       return css`
         display: flex;
         gap: 2;
@@ -58,18 +58,18 @@ export const Container = styled.div<Props>`
 
     /* Horizontal position */
     ${(props) => {
-    if (props.horizontalPosition === 'left') {
+    if (props.$horizontalPosition === 'left') {
       return css`
         margin-right: auto;
       `;
     }
-    if (props.horizontalPosition === 'center') {
+    if (props.$horizontalPosition === 'center') {
       return css`
         margin-left: auto;
         margin-right: auto;
       `;
     }
-    if (props.horizontalPosition === 'right') {
+    if (props.$horizontalPosition === 'right') {
       return css`
         margin-left: auto;
       `;
@@ -79,62 +79,62 @@ export const Container = styled.div<Props>`
 
   /* Padding */
   ${(props) => {
-    if (props.padding === 'around') {
+    if (props.$padding === 'around') {
       return css`
         padding: 1rem;
       `;
     }
-    if (props.padding === 'around-md') {
+    if (props.$padding === 'around-md') {
       return css`
         padding: 1.5rem;
       `;
     }
-    if (props.padding === 'horizontal') {
+    if (props.$padding === 'horizontal') {
       return css`
         padding: 0 1rem;
       `;
     }
-    if (props.padding === 'vertical') {
+    if (props.$padding === 'vertical') {
       return css`
         padding: 1rem 0;
       `;
     }
-    if (props.padding === 'top') {
+    if (props.$padding === 'top') {
       return css`
         padding-top: 1rem;
       `;
     }
-    if (props.padding === 'top-md') {
+    if (props.$padding === 'top-md') {
       return css`
         padding-top: 1.5rem;
       `;
     }
-    if (props.padding === 'right') {
+    if (props.$padding === 'right') {
       return css`
         padding-right: 1rem;
       `;
     }
-    if (props.padding === 'right-md') {
+    if (props.$padding === 'right-md') {
       return css`
         padding-right: 1.5rem;
       `;
     }
-    if (props.padding === 'bottom') {
+    if (props.$padding === 'bottom') {
       return css`
         padding-bottom: 1rem;
       `;
     }
-    if (props.padding === 'bottom-md') {
+    if (props.$padding === 'bottom-md') {
       return css`
         padding-bottom: 1.5rem;
       `;
     }
-    if (props.padding === 'left') {
+    if (props.$padding === 'left') {
       return css`
         padding-left: 1rem;
       `;
     }
-    if (props.padding === 'left-md') {
+    if (props.$padding === 'left-md') {
       return css`
         padding-left: 1.5rem;
       `;

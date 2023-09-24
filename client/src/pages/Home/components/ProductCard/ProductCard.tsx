@@ -15,12 +15,12 @@ export function ProductCard({ id, title, price, description, category, image, ra
   const shortDescription = descriptionLength ? description.slice(0, 38) + '...' : description;
 
   return (
-    <Card shadow="md" padding="lg">
+    <Card $shadow="md" $padding="lg">
       <Styled.Component>
         <p className="category">{category}</p>
         <img src={image} alt={title} className="image" />
 
-        <div>
+        <div className="details-container">
           <h3>{titleLength ? shortTitle : title}</h3>
 
           <StarIcons rating={rating.rate} />
@@ -42,8 +42,8 @@ export function ProductCard({ id, title, price, description, category, image, ra
           </div>
 
           <Button
-            variant="primary"
-            text="Add to Cart"
+            $variant="primary"
+            $text="Add to Cart"
             $borderRadius="sm"
             $handleClick={() => console.log('add to cart')}
           />

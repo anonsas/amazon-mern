@@ -4,10 +4,10 @@ import { Breakpoints } from 'app/utils/breakpoints';
 import * as Styled from './Card.styled';
 
 export type Props = {
-  maxWidth?: Breakpoints;
-  shadow?: 'md';
-  padding?: 'md' | 'lg';
-  backgroundColor?: 'white' | 'beige' | 'light-purple' | 'blue' | 'grey';
+  $maxWidth?: Breakpoints;
+  $shadow?: 'md';
+  $padding?: 'md' | 'lg';
+  $backgroundColor?: 'white' | 'beige' | 'light-purple' | 'blue' | 'grey';
   children: ReactNode;
 };
 

@@ -4,12 +4,12 @@ import * as Styled from './Container.styled';
 
 export type Props = {
   $maxWidth?: Breakpoints | 'full';
-  flexDirection?: 'row' | 'column' | 'rowReverse' | 'columnReverse';
-  alignItems?: CSSProperties['alignItems'];
-  justifyContent?: CSSProperties['justifyContent'];
-  gap?: 'sm' | 'md' | 'lg';
-  horizontalPosition?: 'left' | 'center' | 'right';
-  padding?:
+  $flexDirection?: 'row' | 'column' | 'rowReverse' | 'columnReverse';
+  $alignItems?: CSSProperties['alignItems'];
+  $justifyContent?: CSSProperties['justifyContent'];
+  $gap?: 'sm' | 'md' | 'lg';
+  $horizontalPosition?: 'left' | 'center' | 'right';
+  $padding?:
     | 'around'
     | 'around-md'
     | 'horizontal'
