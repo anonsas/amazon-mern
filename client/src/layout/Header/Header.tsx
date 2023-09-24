@@ -3,8 +3,10 @@ import images from 'assets/images';
 import * as Styled from './Header.styled';
 import { HEADER_BOTTOM_LINKS } from 'app/data';
 import { AiOutlineMenu, AiOutlineUser } from 'react-icons/ai';
+import { useCartStore } from 'app/providers';
 
 export function Header() {
+  const { cart } = useCartStore();
   return (
     <header>
       {/* BurgerMenu Logo Sign-In Cart*/}
@@ -34,7 +36,7 @@ export function Header() {
           </Link>
 
           <Link to="/cart" className="cart-container">
-            <span className="cart-count">0</span>
+            <span className="cart-count">{cart.length}</span>
             <img src={images.cartIcon} className="cart-icon" />
             <span className="cart-name">Cart</span>
           </Link>

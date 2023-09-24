@@ -4,22 +4,15 @@ import { ProductCard } from '..';
 import { useShoppingListData } from 'pages/Home/hooks/useShoppingListData';
 import { Loader } from 'UI';
 import images from 'assets/images';
-
-const generateProductCard = ({ id, title, price, description, category, image, rating }: IProduct) => (
-  <ProductCard
-    key={id}
-    id={id}
-    title={title}
-    description={description}
-    price={price}
-    category={category}
-    image={image}
-    rating={rating}
-  />
-);
+import { useCartStore } from 'app/providers';
 
 export function ProductList() {
   const { isLoading, isError, data } = useShoppingListData();
+  const { addToCart } = useCartStore();
+
+  const handleClick = (product: IProduct) => {
+    addToCart(product);
+  };
 
   if (isLoading) {
     return <Loader $marginTop="lg" />;
@@ -31,9 +24,15 @@ export function ProductList() {
 
   return (
     <Styled.Component>
-      {data.data?.slice(0, 4).map(generateProductCard)}
+      {data.data?.slice(0, 4).map((product) => (
+        <ProductCard key={product.id} handleClick={handleClick} {...product} />
+      ))}
+
       <img src={images.adHomepage} className="products-ad" alt="ad" />
-      {data.data?.slice(5).map(generateProductCard)}
+
+      {data.data?.slice(0, 4).map((product) => (
+        <ProductCard key={product.id} handleClick={handleClick} {...product} />
+      ))}
     </Styled.Component>
   );
 }
