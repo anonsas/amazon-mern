@@ -1,3 +1,11 @@
+import * as Styled from './CartPage.styled';
+import { Cart, Checkout } from './components';
+
 export default function CartPage() {
-  return <div>Cart.page</div>;
+  return (
+    <Styled.Component>
+      {/* <Cart /> */}
+      <Checkout />
+    </Styled.Component>
+  );
 }

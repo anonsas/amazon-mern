@@ -30,7 +30,7 @@ export function ProductList() {
 
       <img src={images.adHomepage} className="products-ad" alt="ad" />
 
-      {data.data?.slice(0, 4).map((product) => (
+      {data.data?.slice(5).map((product) => (
         <ProductCard key={product.id} handleClick={handleClick} {...product} />
       ))}
     </Styled.Component>
