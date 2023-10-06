@@ -4,8 +4,8 @@ import { Cart, Checkout } from './components';
 export default function CartPage() {
   return (
     <Styled.Component>
-      {/* <Cart /> */}
       <Checkout />
+      {/* <Cart /> */}
     </Styled.Component>
   );
 }
