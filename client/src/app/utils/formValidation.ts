@@ -1,5 +1,5 @@
 export function validateName(name: string) {
-  return /^\w+\s\w+$/.test(name);
+  return /^[A-Za-z]+ [A-Za-z]+$/.test(name);
 }
 
 export function validateEmail(email: string) {
@@ -9,5 +9,5 @@ export function validateEmail(email: string) {
 }
 
 export function validatePassword(password: string) {
-  return /(?=.*?[A-Z])(?=.*[.@$!%*#?&])(?=.*?[a-z]).{8,25}$/.test(password);
+  return /^(?=.*?[A-Z])(?=.*[.@$!%*#?&])(?=.*?[a-z])[^ ]{8,25}$/.test(password);
 }
