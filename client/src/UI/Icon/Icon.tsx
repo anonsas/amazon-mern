@@ -1,3 +1,4 @@
+import images from 'assets/images';
 import * as Styled from './Icon.styled';
 import { IconType } from 'app/types';
 
@@ -6,9 +7,9 @@ export type Props = {
   $size?: 'sm' | 'md' | 'lg';
   $className?: string;
   $spin?: boolean;
-  title?: string;
 };
 
-export function Icon({ $size = 'sm', $spin = false, ...rest }: Props): JSX.Element {
-  return <Styled.Component $size={$size} $spin={$spin} {...rest} />;
+export function Icon({ $icon = 'starIcon', $className = '', $size = 'sm', $spin = false }: Props) {
+  const iconImage = images[$icon as keyof typeof images];
+  return <Styled.Component src={iconImage} className={$className} $size={$size} $spin={$spin} />;
 }

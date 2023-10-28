@@ -111,10 +111,6 @@ export const HeaderTop = styled.div`
     place-items: center;
   }
 
-  .cart-icon {
-    height: 3rem;
-  }
-
   .cart-name {
     font-weight: 700;
   }

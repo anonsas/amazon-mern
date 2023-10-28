@@ -5,9 +5,10 @@ import { useShoppingListData } from 'pages/Home/hooks/useShoppingListData';
 import { Loader } from 'UI';
 import images from 'assets/images';
 import { useCartStore } from 'app/providers';
+import { Alert } from 'UI/Alert/Alert';
 
 export function ProductList() {
-  const { isLoading, isError, data } = useShoppingListData();
+  const { isLoading, isError, data, refetch } = useShoppingListData();
   const { addToCart } = useCartStore();
 
   const handleClick = (product: IProduct) => {
@@ -19,7 +20,13 @@ export function ProductList() {
   }
 
   if (isError) {
-    return <h2>Error my friend...</h2>;
+    return (
+      // <Alert $icon={{userIcon: "userIcon"}} />
+      <div>
+        <h2>Error my friend...</h2>
+        <button onClick={() => refetch()}>Try again</button>
+      </div>
+    );
   }
 
   return (
